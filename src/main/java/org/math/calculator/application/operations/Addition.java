@@ -3,10 +3,12 @@ package org.math.calculator.application.operations;
 import org.math.calculator.application.shared.Operations;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service(Operations.ADDITION_VALUE)
-public class Addition implements MathOperation<Double>{
+public class Addition implements MathOperation<BigDecimal> {
     @Override
-    public Double calculate(Double n1, Double n2) {
-        return n1 + n2;
+    public BigDecimal calculate(BigDecimal n1, BigDecimal n2) {
+        return n1.add(n2);
     }
 }
