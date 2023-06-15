@@ -26,7 +26,7 @@ public class CalculatorController {
     public ResponseEntity<OperationResult> calculate(@PathVariable Operations operation, @PathVariable BigDecimal n1,
                                                      @PathVariable BigDecimal n2, @RequestParam(required = false) Integer precision,
                                                      @RequestParam(required = false) RoundingMode roundingMode) {
-        log.info("calculate operation: {}, n1: {}, n2: {}", operation, n1, n2);
+        log.info("calculate operation: {}, n1: {}, n2: {}, precision: {}, roundingMode: {}", operation, n1, n2, precision, roundingMode);
 
         BigDecimal result = mathOperationUseCase.execute(operation, n1, n2, precision, roundingMode);
         log.info("calculate result: {}", result);
