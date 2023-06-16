@@ -17,7 +17,7 @@ import java.util.Objects;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class MathOperationUseCase {
+public class MathOperationUseCase implements OperationUseCase<BigDecimal> {
 
     /**
      * MathOperation implementations are injected by Spring.

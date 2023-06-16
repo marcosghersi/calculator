@@ -4,7 +4,7 @@ import io.corp.calculator.TracerImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.math.calculator.application.shared.Operations;
-import org.math.calculator.application.usecases.MathOperationUseCase;
+import org.math.calculator.application.usecases.OperationUseCase;
 import org.math.calculator.infraestructure.rest.response.OperationResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ import java.math.RoundingMode;
 @Slf4j
 public class CalculatorController {
 
-    private final MathOperationUseCase mathOperationUseCase;
+    private final OperationUseCase<BigDecimal> mathOperationUseCase;
 
     private final TracerImpl tracer;
 
