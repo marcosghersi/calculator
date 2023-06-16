@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>calculator</name>
     <description>Calculator project</description>
+    <packaging>jar</packaging>
     <properties>
         <java.version>17</java.version>
         <lombok-version>1.18.26</lombok-version>
@@ -71,7 +72,7 @@
                         <goals>
                             <goal>install-file</goal>
                         </goals>
-                        <phase>compile</phase>
+                        <phase>validate</phase>
                     </execution>
                 </executions>
             </plugin>
